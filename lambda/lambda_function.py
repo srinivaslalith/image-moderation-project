@@ -19,6 +19,7 @@ def lambda_handler(event, context):
 
     print(json.dumps({
         "event": "lambda_started",
+        "version": "2.0",
         "request_id": context.aws_request_id,
         "record_count": len(event.get("Records", []))
     }))
